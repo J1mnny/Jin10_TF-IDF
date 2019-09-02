@@ -1,0 +1,9 @@
+version: "3"
+services:
+
+  crawl_tfidf:
+    build: .
+    volumes:
+      - .:/news
+      - /etc/localtime:/etc/localtime:ro
+    command: python news_sentiment_analysis.py
